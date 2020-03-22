@@ -12,37 +12,37 @@ namespace ConsoleApp1
         //this is the main function where the algorithim will read the array and sort it in order
         static void Main(string[] args)
         {
-            int[] a = { 20, 60, 50, 40, 50, 1, 100, 101 }; //this is the array of numbers
+            int[] arrayOfNumbers = { 20, 60, 50, 40, 50, 1, 100, 101 }; //this is the array of numbers
 
             Console.WriteLine("Original Array: ");
 
             //this for loop will print out the original array
-            foreach (int X in a)
+            foreach (int x in arrayOfNumbers)
             {
-                Console.Write(X + ", ");
+                Console.Write(x + ", ");
             }
 
             //this for loop will loop through the contents in the array starting from the first number
-            for (int p = 0; p <= a.Length - 2; p++)
+            for (int j = 0; j <= arrayOfNumbers.Length - 2; j++)
             {
                 //here is another for loop 
                 for (int i = 0; i <= a.Length - 2; i++)
                 {
-                    int t;
+                    int temp;
                     if (a[i] > a[i + 1])
                     {
-                        t = a[i + 1];
+                        temp = a[i + 1];
                         a[i + 1] = a[i];
-                        a[i] = t;
+                        a[i] = temp;
                     }
                 }
             }
 
             //finally the sorted array is printed out
             Console.WriteLine("\n" + "Sorted array: ");
-            foreach (int aa in a)
+            foreach (int i in arrayOfNumbers)
             {
-                Console.Write(aa + ", ");
+                Console.Write(i + ", ");
                 //Console.Write("\n");
             }
 
